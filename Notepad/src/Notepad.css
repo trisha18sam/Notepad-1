@@ -1,10 +1,150 @@
 .notepad.app-shell {
   min-height: 100vh;
-  background: radial-gradient(circle at top, rgba(96, 165, 250, 0.16), transparent 18%), linear-gradient(180deg, #020617 0%, #0b1121 100%);
-  color: #e2e8f0;
+  --surface: rgba(9, 15, 28, 0.82);
+  --surface-strong: #0b1220;
+  --surface-muted: rgba(15, 23, 42, 0.7);
+  --line: rgba(148, 163, 184, 0.16);
+  --text-main: #f8fafc;
+  --text-soft: #9fb0c6;
+  --accent: #5b8cff;
+  --accent-strong: #2563eb;
+  --accent-soft: rgba(91, 140, 255, 0.18);
+  --shadow-lg: 0 30px 90px rgba(2, 6, 23, 0.48);
+  --app-bg: linear-gradient(180deg, #0c1220 0%, #0b1020 100%);
+  --bg-glow-a: rgba(91, 140, 255, 0.22);
+  --bg-glow-b: rgba(244, 114, 182, 0.12);
+  --bg-scene: none;
+  background: var(--app-bg);
+  color: var(--text-main);
   display: flex;
   flex-direction: column;
+  position: relative;
+  isolation: isolate;
   overflow: hidden;
+}
+
+.notepad.app-shell::before,
+.notepad.app-shell::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.notepad.app-shell::before {
+  background:
+    radial-gradient(circle at 20% 12%, var(--bg-glow-a), transparent 20%),
+    radial-gradient(circle at 80% 14%, var(--bg-glow-b), transparent 18%),
+    linear-gradient(180deg, transparent 0%, rgba(2, 6, 23, 0.12) 100%);
+  opacity: 0.92;
+}
+
+.notepad.app-shell::after {
+  background-image: var(--bg-scene);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  opacity: 0.98;
+  mask-image: linear-gradient(180deg, black 0%, black 72%, transparent 100%);
+}
+
+.notepad.app-shell.bg-sunset {
+  --app-bg: linear-gradient(180deg, #ffb36b 0%, #ff7a59 18%, #673a79 54%, #111a3a 100%);
+  --bg-glow-a: rgba(255, 179, 107, 0.52);
+  --bg-glow-b: rgba(255, 122, 89, 0.26);
+  --bg-scene:
+    radial-gradient(circle at 50% 36%, rgba(255, 228, 158, 0.98) 0 6%, rgba(255, 190, 100, 0.7) 7%, rgba(255, 190, 100, 0.2) 15%, transparent 16%),
+    radial-gradient(circle at 30% 46%, rgba(255, 255, 255, 0.32) 0 2.2%, transparent 3.2%),
+    radial-gradient(circle at 74% 42%, rgba(255, 255, 255, 0.28) 0 2.1%, transparent 3.1%),
+    radial-gradient(circle at 18% 38%, rgba(255, 255, 255, 0.18) 0 1.8%, transparent 2.8%),
+    linear-gradient(180deg, transparent 0 66%, rgba(12, 18, 34, 0) 66%),
+    linear-gradient(180deg, transparent 0 69%, rgba(5, 12, 24, 0.52) 69% 70.5%, rgba(11, 23, 34, 0.92) 70.5% 100%),
+    linear-gradient(175deg, transparent 0 67%, rgba(91, 57, 35, 0.95) 67% 72%, transparent 72%),
+    linear-gradient(178deg, transparent 0 70%, rgba(18, 17, 47, 0.9) 70% 100%);
+}
+
+.notepad.app-shell.bg-ocean {
+  --app-bg: linear-gradient(180deg, #8ddcff 0%, #55b7ef 22%, #0d5d8f 58%, #041426 100%);
+  --bg-glow-a: rgba(141, 220, 255, 0.42);
+  --bg-glow-b: rgba(85, 183, 239, 0.25);
+  --bg-scene:
+    radial-gradient(circle at 50% 14%, rgba(255, 255, 255, 0.92) 0 4%, transparent 5%),
+    radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.85) 0 2.5%, transparent 3.5%),
+    radial-gradient(circle at 26% 18%, rgba(255, 255, 255, 0.75) 0 2.5%, transparent 3.5%),
+    radial-gradient(ellipse at 50% 74%, rgba(19, 94, 128, 0.96) 0 26%, rgba(10, 70, 104, 0.98) 27% 36%, rgba(6, 34, 61, 1) 37% 100%),
+    linear-gradient(165deg, transparent 0 57%, rgba(255, 255, 255, 0.22) 57% 60%, transparent 60%),
+    linear-gradient(175deg, transparent 0 63%, rgba(255, 255, 255, 0.16) 63% 65%, transparent 65%),
+    linear-gradient(180deg, transparent 0 70%, rgba(7, 22, 40, 0.95) 70% 100%);
+}
+
+.notepad.app-shell.bg-night {
+  --app-bg: linear-gradient(180deg, #0b1530 0%, #091025 36%, #050812 100%);
+  --bg-glow-a: rgba(91, 140, 255, 0.18);
+  --bg-glow-b: rgba(167, 139, 250, 0.14);
+  --bg-scene:
+    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.95) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.8) 0 1.1px, transparent 2px),
+    radial-gradient(circle at 60% 14%, rgba(255, 255, 255, 0.92) 0 2px, transparent 3px),
+    radial-gradient(circle at 76% 24%, rgba(255, 255, 255, 0.8) 0 1.2px, transparent 2px),
+    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.72) 0 1.2px, transparent 2px),
+    radial-gradient(circle at 70% 18%, rgba(221, 235, 255, 0.98) 0 5%, rgba(221, 235, 255, 0.28) 6%, transparent 7%),
+    linear-gradient(180deg, transparent 0 70%, rgba(4, 8, 18, 0.92) 70% 100%);
+}
+
+.notepad.app-shell.bg-nature {
+  --app-bg: linear-gradient(180deg, #82d6a7 0%, #4d9f76 30%, #163d2f 64%, #08120f 100%);
+  --bg-glow-a: rgba(130, 214, 167, 0.28);
+  --bg-glow-b: rgba(77, 159, 118, 0.18);
+  --bg-scene:
+    radial-gradient(circle at 14% 20%, rgba(255, 255, 255, 0.6) 0 2.5%, transparent 4%),
+    radial-gradient(circle at 84% 18%, rgba(255, 255, 255, 0.55) 0 2.2%, transparent 4%),
+    linear-gradient(180deg, transparent 0 62%, rgba(27, 82, 51, 0.88) 62% 100%),
+    linear-gradient(172deg, transparent 0 58%, rgba(40, 74, 44, 0.96) 58% 66%, transparent 66%),
+    linear-gradient(178deg, transparent 0 61%, rgba(17, 48, 31, 0.98) 61% 100%),
+    radial-gradient(ellipse at 50% 75%, rgba(44, 112, 72, 0.95) 0 22%, rgba(26, 66, 43, 0.98) 23% 42%, rgba(11, 30, 22, 1) 43% 100%);
+}
+
+.notepad.app-shell.bg-beach {
+  --app-bg: linear-gradient(180deg, #7edcff 0%, #c5efff 24%, #f7c97d 55%, #f3a35b 72%, #284667 100%);
+  --bg-glow-a: rgba(126, 220, 255, 0.36);
+  --bg-glow-b: rgba(247, 201, 125, 0.22);
+  --bg-scene:
+    radial-gradient(circle at 50% 22%, rgba(255, 244, 194, 0.98) 0 7%, transparent 8%),
+    radial-gradient(circle at 16% 20%, rgba(255, 255, 255, 0.7) 0 2%, transparent 3%),
+    radial-gradient(circle at 78% 22%, rgba(255, 255, 255, 0.55) 0 2%, transparent 3%),
+    linear-gradient(180deg, transparent 0 60%, rgba(48, 153, 201, 0.52) 60% 64%, rgba(27, 114, 182, 0.78) 64% 68%, rgba(14, 75, 126, 0.92) 68% 100%),
+    linear-gradient(170deg, transparent 0 66%, rgba(249, 210, 145, 0.95) 66% 76%, transparent 76%),
+    radial-gradient(ellipse at 50% 83%, rgba(232, 188, 113, 0.98) 0 20%, rgba(210, 154, 80, 0.96) 21% 44%, rgba(140, 99, 53, 0.98) 45% 100%);
+}
+
+.notepad.app-shell.bg-rain {
+  --app-bg: linear-gradient(180deg, #8ca2c4 0%, #637695 33%, #2f394d 66%, #141821 100%);
+  --bg-glow-a: rgba(140, 162, 196, 0.22);
+  --bg-glow-b: rgba(99, 118, 149, 0.14);
+  --bg-scene:
+    repeating-linear-gradient(115deg, transparent 0 15px, rgba(180, 212, 255, 0.36) 15px 17px, transparent 17px 31px),
+    linear-gradient(180deg, transparent 0 58%, rgba(27, 32, 45, 0.92) 58% 100%),
+    linear-gradient(180deg, #8ca2c4 0%, #637695 33%, #2f394d 66%, #141821 100%);
+}
+
+.notepad.app-shell.bg-aurora {
+  --app-bg: linear-gradient(180deg, #111633 0%, #0c1022 40%, #06111b 100%);
+  --bg-glow-a: rgba(60, 255, 204, 0.18);
+  --bg-glow-b: rgba(91, 140, 255, 0.14);
+  --bg-scene:
+    linear-gradient(120deg, transparent 0 25%, rgba(48, 255, 207, 0.24) 25% 31%, transparent 31% 50%, rgba(91, 140, 255, 0.18) 50% 56%, transparent 56% 100%),
+    linear-gradient(180deg, #111633 0%, #0c1022 40%, #06111b 100%);
+}
+
+.notepad.app-shell.bg-desert {
+  --app-bg: linear-gradient(180deg, #ffd59a 0%, #f4b56e 34%, #b5723b 68%, #3a2417 100%);
+  --bg-glow-a: rgba(255, 213, 154, 0.36);
+  --bg-glow-b: rgba(244, 181, 110, 0.2);
+  --bg-scene:
+    radial-gradient(circle at 50% 22%, rgba(255, 231, 178, 0.98) 0 7%, transparent 8%),
+    linear-gradient(180deg, transparent 0 60%, rgba(153, 100, 54, 0.96) 60% 100%),
+    linear-gradient(180deg, #ffd59a 0%, #f4b56e 34%, #b5723b 68%, #3a2417 100%);
 }
 
 .app-header {
@@ -255,6 +395,52 @@ select {
   gap: 10px;
 }
 
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.palette-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(15, 23, 42, 0.82);
+  color: #e2e8f0;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.palette-chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(148, 163, 184, 0.28);
+  background: rgba(30, 41, 59, 0.94);
+}
+
+.palette-chip.active {
+  border-color: color-mix(in srgb, var(--chip-color) 70%, white);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--chip-color) 50%, transparent), 0 14px 34px rgba(2, 6, 23, 0.28);
+}
+
+.palette-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--chip-color), var(--chip-color-strong));
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.03);
+  flex: 0 0 auto;
+}
+
 .setting-group label {
   font-size: 12px;
   text-transform: uppercase;
@@ -363,24 +549,618 @@ select {
   background: #0f1724;
 }
 
-@media (max-width: 900px) {
-  .app-header,
-  .editor {
-    padding-left: 16px;
-    padding-right: 16px;
+.notepad.app-shell {
+  --surface: rgba(9, 15, 28, 0.82);
+  --surface-strong: #0b1220;
+  --surface-muted: rgba(15, 23, 42, 0.7);
+  --line: rgba(148, 163, 184, 0.16);
+  --text-main: #f8fafc;
+  --text-soft: #9fb0c6;
+  --accent: #5b8cff;
+  --accent-strong: #2563eb;
+  --accent-soft: rgba(91, 140, 255, 0.18);
+  --shadow-lg: 0 30px 90px rgba(2, 6, 23, 0.48);
+  min-height: 100vh;
+  width: 100%;
+  padding: clamp(18px, 2.6vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.2), transparent 24%),
+    radial-gradient(circle at top right, rgba(244, 114, 182, 0.12), transparent 20%),
+    linear-gradient(180deg, #050816 0%, #0a1020 100%);
+  color: var(--text-main);
+}
+
+.notepad.app-shell.nature {
+  background:
+    radial-gradient(circle at top left, rgba(45, 212, 191, 0.2), transparent 24%),
+    radial-gradient(circle at top right, rgba(96, 165, 250, 0.12), transparent 22%),
+    linear-gradient(180deg, #051019 0%, #0b1723 100%);
+}
+
+.notepad.app-shell.ocean {
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), transparent 24%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 22%),
+    linear-gradient(180deg, #04101d 0%, #071426 100%);
+}
+
+.notepad.app-shell.sunset {
+  background:
+    radial-gradient(circle at top left, rgba(251, 146, 60, 0.2), transparent 24%),
+    radial-gradient(circle at top right, rgba(244, 114, 182, 0.12), transparent 22%),
+    linear-gradient(180deg, #120816 0%, #1b1020 100%);
+}
+
+.notepad.app-shell.night {
+  background:
+    radial-gradient(circle at top left, rgba(167, 139, 250, 0.18), transparent 24%),
+    radial-gradient(circle at top right, rgba(96, 165, 250, 0.12), transparent 22%),
+    linear-gradient(180deg, #050814 0%, #0d1220 100%);
+}
+
+.notepad .app-header {
+  width: min(1360px, 100%);
+  margin: 0 auto;
+  padding: 0;
+  align-items: flex-end;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.notepad .app-header > div:first-child {
+  max-width: 760px;
+  text-align: left;
+}
+
+.notepad .app-header h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 4.2vw, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  color: var(--text-main);
+}
+
+.notepad .subtitle {
+  margin-top: 10px;
+  font-size: 0.98rem;
+  color: var(--text-soft);
+}
+
+.notepad .subtitle.small {
+  margin-top: 6px;
+  font-size: 0.88rem;
+}
+
+.notepad .app-actions {
+  gap: 12px;
+}
+
+.notepad .btn {
+  min-height: 44px;
+  border: 1px solid var(--line);
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  padding: 10px 16px;
+  border-radius: 16px;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.notepad .btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+.notepad .btn:focus-visible,
+.notepad .theme-chip:focus-visible,
+.notepad input:focus-visible,
+.notepad select:focus-visible,
+.notepad textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.notepad .btn.primary {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  box-shadow: 0 16px 36px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+.notepad .btn.primary:hover {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 88%, white), var(--accent-strong));
+}
+
+.notepad .btn.icon {
+  width: 44px;
+  padding-inline: 0;
+  font-size: 1.1rem;
+}
+
+.notepad .editor {
+  width: min(1360px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+  gap: 22px;
+  padding: 0;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.notepad .phone-frame {
+  width: 100%;
+  border-radius: 36px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.notepad .phone-frame::before {
+  top: 16px;
+  width: 96px;
+  height: 5px;
+  background: color-mix(in srgb, var(--text-main) 12%, transparent);
+}
+
+.notepad .phone-statusbar {
+  padding: 18px 22px 12px;
+  color: var(--text-soft);
+  font-size: 0.75rem;
+  text-transform: none;
+  letter-spacing: 0.08em;
+}
+
+.notepad .phone-screen {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--text-main) 4%, transparent), transparent 18%),
+    var(--surface-strong);
+  padding: 0 0 22px;
+}
+
+.notepad .editor-inner {
+  margin: 0 18px;
+  border-radius: 28px;
+  background: var(--surface-muted);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+}
+
+.notepad .editor-top {
+  padding: 24px 24px 0;
+  gap: 16px;
+}
+
+.notepad .active-avatar img,
+.notepad .avatar-placeholder {
+  width: 92px;
+  height: 92px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--text-main) 8%, transparent), transparent);
+  box-shadow: 0 22px 42px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.notepad .title-group {
+  gap: 10px;
+}
+
+.notepad .title {
+  min-height: 58px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+  color: var(--text-main);
+  font-size: clamp(1.45rem, 2vw, 1.8rem);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--text-main) 4%, transparent);
+}
+
+.notepad .note-selector,
+.notepad .text-input,
+.notepad select {
+  min-height: 44px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+  color: var(--text-main);
+}
+
+.notepad .note-selector {
+  max-width: 100%;
+}
+
+.notepad .body {
+  min-height: clamp(380px, 52vh, 720px);
+  margin: 18px 24px 0;
+  padding: 22px 22px 24px;
+  border-radius: 26px;
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  background: color-mix(in srgb, var(--surface-strong) 95%, black);
+  color: var(--text-main);
+  font-size: 1rem;
+  line-height: 1.85;
+  resize: vertical;
+}
+
+.notepad .editor-footer {
+  padding: 18px 24px 24px;
+  color: var(--text-soft);
+}
+
+.notepad .editor-footer small {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-soft);
+}
+
+.notepad .editor-footer small::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.notepad .personalization-card {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin-top: 0;
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: 22px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 92%, black);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-lg);
+}
+
+.notepad .panel-header h2 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.notepad .setting-group {
+  margin-top: 18px;
+}
+
+.notepad .background-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.notepad .background-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+  color: var(--text-main);
+  text-align: left;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.notepad .background-card:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent) 34%, var(--line));
+}
+
+.notepad .background-card.active {
+  border-color: transparent;
+  box-shadow: 0 0 0 1px var(--accent-soft), 0 16px 34px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.notepad .background-preview {
+  width: 100%;
+  height: 68px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--text-main) 10%, transparent);
+  background: var(--app-bg);
+}
+
+.notepad .background-preview::before,
+.notepad .background-preview::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.notepad .background-preview::before {
+  background: inherit;
+}
+
+.notepad .background-preview::after {
+  background: inherit;
+  opacity: 0.92;
+}
+
+.notepad .background-preview.bg-sunset::after {
+  background:
+    radial-gradient(circle at 50% 36%, rgba(255, 228, 158, 0.95) 0 12%, transparent 13%),
+    linear-gradient(180deg, transparent 0 52%, rgba(18, 32, 60, 0.88) 52% 100%),
+    linear-gradient(180deg, #ffb36b 0%, #ff7a59 34%, #673a79 72%, #111a3a 100%);
+}
+
+.notepad .background-preview.bg-ocean::after {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.92) 0 6%, transparent 7%),
+    linear-gradient(180deg, transparent 0 60%, rgba(7, 22, 40, 0.92) 60% 100%),
+    linear-gradient(180deg, #8ddcff 0%, #55b7ef 22%, #0d5d8f 58%, #041426 100%);
+}
+
+.notepad .background-preview.bg-night::after {
+  background:
+    radial-gradient(circle at 68% 20%, rgba(221, 235, 255, 0.9) 0 7%, transparent 8%),
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.92) 0 1.6px, transparent 2px),
+    radial-gradient(circle at 38% 32%, rgba(255, 255, 255, 0.72) 0 1.2px, transparent 2px),
+    linear-gradient(180deg, #0b1530 0%, #091025 36%, #050812 100%);
+}
+
+.notepad .background-preview.bg-nature::after {
+  background:
+    radial-gradient(circle at 52% 18%, rgba(255, 255, 255, 0.62) 0 6%, transparent 7%),
+    linear-gradient(180deg, transparent 0 66%, rgba(27, 82, 51, 0.92) 66% 100%),
+    linear-gradient(180deg, #82d6a7 0%, #4d9f76 30%, #163d2f 64%, #08120f 100%);
+}
+
+.notepad .background-preview.bg-forest::after {
+  background:
+    radial-gradient(circle at 50% 16%, rgba(255, 255, 255, 0.6) 0 5%, transparent 6%),
+    linear-gradient(180deg, transparent 0 54%, rgba(16, 55, 35, 0.92) 54% 100%),
+    linear-gradient(180deg, #4fc38b 0%, #2d7f58 34%, #143022 72%, #06100b 100%);
+}
+
+.notepad .background-preview.bg-beach::after {
+  background:
+    radial-gradient(circle at 50% 22%, rgba(255, 244, 194, 0.98) 0 7%, transparent 8%),
+    linear-gradient(180deg, transparent 0 56%, rgba(48, 153, 201, 0.65) 56% 65%, rgba(27, 114, 182, 0.86) 65% 72%, rgba(14, 75, 126, 0.95) 72% 100%),
+    linear-gradient(180deg, #7edcff 0%, #c5efff 24%, #f7c97d 55%, #f3a35b 72%, #284667 100%);
+}
+
+.notepad .background-preview.bg-rain::after {
+  background:
+    repeating-linear-gradient(115deg, transparent 0 11px, rgba(180, 212, 255, 0.42) 11px 13px, transparent 13px 25px),
+    linear-gradient(180deg, transparent 0 60%, rgba(27, 32, 45, 0.95) 60% 100%),
+    linear-gradient(180deg, #8ca2c4 0%, #637695 33%, #2f394d 66%, #141821 100%);
+}
+
+.notepad .background-preview.bg-aurora::after {
+  background:
+    linear-gradient(120deg, transparent 0 25%, rgba(48, 255, 207, 0.24) 25% 31%, transparent 31% 50%, rgba(91, 140, 255, 0.18) 50% 56%, transparent 56% 100%),
+    linear-gradient(180deg, #111633 0%, #0c1022 40%, #06111b 100%);
+}
+
+.notepad .background-preview.bg-desert::after {
+  background:
+    radial-gradient(circle at 50% 22%, rgba(255, 231, 178, 0.98) 0 7%, transparent 8%),
+    linear-gradient(180deg, transparent 0 60%, rgba(153, 100, 54, 0.96) 60% 100%),
+    linear-gradient(180deg, #ffd59a 0%, #f4b56e 34%, #b5723b 68%, #3a2417 100%);
+}
+
+.notepad .setting-group label {
+  color: var(--text-soft);
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+}
+
+.notepad .theme-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.notepad .theme-chip {
+  min-height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+  color: var(--text-main);
+  padding: 0 14px;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.notepad .theme-chip:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
+  background: color-mix(in srgb, var(--surface-strong) 88%, var(--accent) 12%);
+}
+
+.notepad .theme-chip.active {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+}
+
+.notepad .sticker-preview {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface-strong) 90%, var(--accent) 10%);
+}
+
+.notepad .sticker-preview img {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+.notepad .sticker-preview strong {
+  display: block;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.notepad .sticker-preview p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.86rem;
+}
+
+.notepad .sticker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.notepad .sticker-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 10px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+  color: var(--text-main);
+  text-align: left;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.notepad .sticker-chip:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent) 34%, var(--line));
+  background: color-mix(in srgb, var(--surface-strong) 86%, var(--accent) 14%);
+}
+
+.notepad .sticker-chip.active {
+  border-color: transparent;
+  box-shadow: 0 0 0 1px var(--accent-soft), 0 16px 34px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.notepad .sticker-chip img {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+.notepad .sticker-chip span {
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.notepad .upload-label {
+  width: 100%;
+  justify-content: center;
+  border-radius: 16px;
+  border-color: rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.82);
+}
+
+.notepad .loader-overlay {
+  background: rgba(2, 6, 23, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+.notepad .loader-card {
+  border-radius: 24px;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+}
+
+.notepad .loader-ring {
+  border-top-color: var(--accent);
+}
+
+@media (max-width: 1100px) {
+  .notepad .editor {
+    grid-template-columns: 1fr;
   }
 
-  .phone-frame {
-    width: 100%;
-  }
-
-  .personalization-card {
+  .notepad .personalization-card {
     position: static;
-    width: 100%;
     max-height: none;
-    box-shadow: none;
-    border: none;
-    margin-top: 18px;
-    padding: 18px 0 0;
+  }
+
+  .notepad .background-grid,
+  .notepad .palette-grid,
+  .notepad .sticker-grid {
+    grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 760px) {
+  .notepad.app-shell {
+    padding: 14px;
+    gap: 16px;
+  }
+
+  .notepad .app-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .notepad .app-actions {
+    width: 100%;
+  }
+
+  .notepad .app-actions .btn {
+    flex: 1 1 0;
+  }
+
+  .notepad .phone-frame {
+    border-radius: 28px;
+  }
+
+  .notepad .editor-inner {
+    margin: 0 12px;
+    border-radius: 22px;
+  }
+
+  .notepad .editor-top {
+    flex-direction: column;
+    padding: 18px 18px 0;
+  }
+
+  .notepad .title {
+    min-height: 54px;
+  }
+
+  .notepad .body {
+    margin: 16px 18px 0;
+    padding: 18px;
+    min-height: 320px;
+  }
+
+  .notepad .editor-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
