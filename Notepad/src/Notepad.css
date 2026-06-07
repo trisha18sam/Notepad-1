@@ -691,12 +691,45 @@ select {
   width: min(1360px, 100%);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+  grid-template-columns: minmax(0, 1fr);
   gap: 22px;
   padding: 0;
   align-items: start;
   position: relative;
   z-index: 1;
+}
+
+.notepad .editor.has-one-panel {
+  grid-template-columns: minmax(0, 1.8fr) minmax(300px, 360px);
+}
+
+.notepad .editor.has-both-panels {
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 360px) minmax(300px, 360px);
+}
+
+.notepad .anime-char-scroll-area {
+  max-height: 480px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding-right: 4px;
+}
+
+.notepad .anime-char-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notepad .anime-char-scroll-area::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 999px;
+}
+
+.notepad .anime-char-scroll-area::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+.notepad .anime-char-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.24);
 }
 
 .notepad .phone-frame {
@@ -1099,7 +1132,9 @@ select {
 }
 
 @media (max-width: 1100px) {
-  .notepad .editor {
+  .notepad .editor,
+  .notepad .editor.has-one-panel,
+  .notepad .editor.has-both-panels {
     grid-template-columns: 1fr;
   }
 
