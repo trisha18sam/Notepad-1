@@ -8,8 +8,16 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/14/545145.jpg"
   },
   {
+    "name": "Alexis (Saving 80,000 Gold in Another World for My Retirement)",
+    "url": "https://cdn.myanimelist.net/images/characters/6/554765.jpg"
+  },
+  {
     "name": "All Might (My Hero Academia)",
     "url": "https://cdn.myanimelist.net/images/characters/14/310613.jpg"
+  },
+  {
+    "name": "Alois Trancy (Black Butler)",
+    "url": "https://cdn.myanimelist.net/images/characters/9/94244.jpg"
   },
   {
     "name": "Alphonse Elric (Fullmetal Alchemist)",
@@ -22,6 +30,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Amuro Ray (Mobile Suit Gundam)",
     "url": "https://cdn.myanimelist.net/images/characters/11/324745.jpg"
+  },
+  {
+    "name": "Anisphia Wynn Palettia (The Magical Revolution of the Reincarnated Princess and the Genius Young Lady)",
+    "url": "https://cdn.myanimelist.net/images/characters/7/484686.jpg"
   },
   {
     "name": "Anya Forger (Spy x Family)",
@@ -40,12 +52,28 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/12/258501.jpg"
   },
   {
+    "name": "Azusa Aizawa (I've Been Killing Slimes for 300 Years and Maxed Out My Level)",
+    "url": "https://cdn.myanimelist.net/images/characters/4/611577.jpg"
+  },
+  {
     "name": "Bakugo Katsuki (My Hero Academia)",
     "url": "https://cdn.myanimelist.net/images/characters/12/299406.jpg"
   },
   {
+    "name": "Baldroy (Black Butler)",
+    "url": "https://cdn.myanimelist.net/images/characters/16/43423.jpg"
+  },
+  {
     "name": "Ban (The Seven Deadly Sins)",
     "url": "https://cdn.myanimelist.net/images/characters/7/247739.jpg"
+  },
+  {
+    "name": "Beatrice (Saving 80,000 Gold in Another World for My Retirement)",
+    "url": "https://cdn.myanimelist.net/images/characters/6/619228.jpg"
+  },
+  {
+    "name": "Benimaru (That Time I Got Reincarnated as a Slime)",
+    "url": "https://cdn.myanimelist.net/images/characters/7/105529.jpg"
   },
   {
     "name": "Bulma (Dragon Ball)",
@@ -64,6 +92,10 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/15/559031.jpg"
   },
   {
+    "name": "Christophe Giacometti (Yuri!!! on Ice)",
+    "url": "https://cdn.myanimelist.net/images/characters/8/316246.jpg"
+  },
+  {
     "name": "Chuuya Nakahara (Bungo Stray Dogs)",
     "url": "https://cdn.myanimelist.net/images/characters/16/305870.jpg"
   },
@@ -72,12 +104,24 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/9/253757.jpg"
   },
   {
+    "name": "Claude Faustus (Black Butler)",
+    "url": "https://cdn.myanimelist.net/images/characters/10/95214.jpg"
+  },
+  {
+    "name": "Colette (Saving 80,000 Gold in Another World for My Retirement)",
+    "url": "https://picsum.photos/seed/colette_saving_80,000/96"
+  },
+  {
     "name": "Dazai Osamu (Bungo Stray Dogs)",
     "url": "https://cdn.myanimelist.net/images/characters/7/480369.jpg"
   },
   {
     "name": "Denji (Chainsaw Man)",
     "url": "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png"
+  },
+  {
+    "name": "Diablo (That Time I Got Reincarnated as a Slime)",
+    "url": "https://cdn.myanimelist.net/images/characters/7/607283.jpg"
   },
   {
     "name": "Dio Brando (JoJo's Bizarre Adventure)",
@@ -92,6 +136,14 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png"
   },
   {
+    "name": "Elise de Clorance (Doctor Elise: The Royal Lady with the Lamp)",
+    "url": "https://cdn.myanimelist.net/images/characters/9/444619.jpg"
+  },
+  {
+    "name": "Elizabeth Midford (Black Butler)",
+    "url": "https://cdn.myanimelist.net/images/characters/6/67978.jpg"
+  },
+  {
     "name": "Eren Yeager (Attack on Titan)",
     "url": "https://cdn.myanimelist.net/images/characters/10/216895.jpg"
   },
@@ -104,8 +156,20 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/12/265641.jpg"
   },
   {
+    "name": "Euphyllia Magenta (The Magical Revolution of the Reincarnated Princess and the Genius Young Lady)",
+    "url": "https://cdn.myanimelist.net/images/characters/14/484687.jpg"
+  },
+  {
     "name": "Faye Valentine (Cowboy Bebop)",
     "url": "https://cdn.myanimelist.net/images/characters/15/264961.jpg"
+  },
+  {
+    "name": "Fel (Campfire Cooking in Another World with My Absurd Skill)",
+    "url": "https://cdn.myanimelist.net/images/characters/12/610953.jpg"
+  },
+  {
+    "name": "Finnian (Black Butler)",
+    "url": "https://cdn.myanimelist.net/images/characters/11/109621.jpg"
   },
   {
     "name": "Frieren (Frieren: Beyond Journey's End)",
@@ -114,6 +178,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Frieza (Dragon Ball)",
     "url": "https://cdn.myanimelist.net/images/characters/16/561778.jpg"
+  },
+  {
+    "name": "Fuu Hououji (Magic Knight Rayearth)",
+    "url": "https://cdn.myanimelist.net/images/characters/16/634875.jpg"
   },
   {
     "name": "Gaara (Naruto)",
@@ -128,6 +196,10 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/15/241479.jpg"
   },
   {
+    "name": "Gobta (That Time I Got Reincarnated as a Slime)",
+    "url": "https://cdn.myanimelist.net/images/characters/12/381715.jpg"
+  },
+  {
     "name": "Gohan (Dragon Ball)",
     "url": "https://cdn.myanimelist.net/images/characters/9/446314.jpg"
   },
@@ -138,6 +210,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Gon Freecss (Hunter x Hunter)",
     "url": "https://cdn.myanimelist.net/images/characters/11/174517.jpg"
+  },
+  {
+    "name": "Grell Sutcliff (Black Butler)",
+    "url": "https://cdn.myanimelist.net/images/characters/3/109620.jpg"
   },
   {
     "name": "Gryphon Griffith (Berserk)",
@@ -154,6 +230,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Haku (Spirited Away)",
     "url": "https://cdn.myanimelist.net/images/characters/8/517296.jpg"
+  },
+  {
+    "name": "Hakurou (That Time I Got Reincarnated as a Slime)",
+    "url": "https://cdn.myanimelist.net/images/characters/7/384886.jpg"
   },
   {
     "name": "Haruka Nanase (Free!)",
@@ -176,6 +256,10 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/2/48468.jpg"
   },
   {
+    "name": "Hikaru Shidou (Magic Knight Rayearth)",
+    "url": "https://cdn.myanimelist.net/images/characters/9/102554.jpg"
+  },
+  {
     "name": "Hinata Hyuga (Naruto)",
     "url": "https://cdn.myanimelist.net/images/characters/6/278736.jpg"
   },
@@ -196,6 +280,10 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/3/174561.jpg"
   },
   {
+    "name": "Hitomi Kanzaki (The Vision of Escaflowne)",
+    "url": "https://cdn.myanimelist.net/images/characters/13/112069.jpg"
+  },
+  {
     "name": "Howl Jenkins Pendragon (Howl's Moving Castle)",
     "url": "https://cdn.myanimelist.net/images/characters/4/83512.jpg"
   },
@@ -212,6 +300,10 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/4/89606.jpg"
   },
   {
+    "name": "Iris (Saving 80,000 Gold in Another World for My Retirement)",
+    "url": "https://picsum.photos/seed/iris_saving_80,000/96"
+  },
+  {
     "name": "Issei Hyoudou (High School DxD)",
     "url": "https://cdn.myanimelist.net/images/characters/4/211641.jpg"
   },
@@ -226,6 +318,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Izumi Miyamura (Horimiya)",
     "url": "https://cdn.myanimelist.net/images/characters/12/507110.jpg"
+  },
+  {
+    "name": "Jean-Jacques Leroy (Yuri!!! on Ice)",
+    "url": "https://cdn.myanimelist.net/images/characters/2/311716.jpg"
   },
   {
     "name": "Jigen Daisuke (Lupin III)",
@@ -250,6 +346,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Kageyama Tobio (Haikyuu!!)",
     "url": "https://cdn.myanimelist.net/images/characters/13/417874.jpg"
+  },
+  {
+    "name": "Kagome Higurashi (Inuyasha)",
+    "url": "https://cdn.myanimelist.net/images/characters/13/41189.jpg"
   },
   {
     "name": "Kaguya Shinomiya (Kaguya-sama: Love is War)",
@@ -408,6 +508,14 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/14/349249.jpg"
   },
   {
+    "name": "Mey-Rin (Black Butler)",
+    "url": "https://cdn.myanimelist.net/images/characters/12/66550.jpg"
+  },
+  {
+    "name": "Miaka Yuuki (Fushigi Yûgi)",
+    "url": "https://cdn.myanimelist.net/images/characters/3/89886.jpg"
+  },
+  {
     "name": "Mikasa Ackerman (Attack on Titan)",
     "url": "https://cdn.myanimelist.net/images/characters/9/215563.jpg"
   },
@@ -420,6 +528,14 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/15/507743.jpg"
   },
   {
+    "name": "Milim Nava (That Time I Got Reincarnated as a Slime)",
+    "url": "https://cdn.myanimelist.net/images/characters/6/447552.jpg"
+  },
+  {
+    "name": "Minako Okukawa (Yuri!!! on Ice)",
+    "url": "https://picsum.photos/seed/minako_okukawa/96"
+  },
+  {
     "name": "Minato Namikaze (Naruto)",
     "url": "https://cdn.myanimelist.net/images/characters/2/515666.jpg"
   },
@@ -428,12 +544,24 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/5/336342.jpg"
   },
   {
+    "name": "Mitsuha Yamano (Saving 80,000 Gold in Another World for My Retirement)",
+    "url": "https://cdn.myanimelist.net/images/characters/3/372125.jpg"
+  },
+  {
     "name": "Monkey D. Luffy (One Piece)",
     "url": "https://cdn.myanimelist.net/images/characters/9/310307.jpg"
   },
   {
     "name": "Motoko Kusanagi (Ghost in the Shell)",
     "url": "https://cdn.myanimelist.net/images/characters/2/314931.jpg"
+  },
+  {
+    "name": "Mukouda Tsuyoshi (Campfire Cooking in Another World with My Absurd Skill)",
+    "url": "https://cdn.myanimelist.net/images/characters/16/610954.jpg"
+  },
+  {
+    "name": "Myne / Rozemyne (Ascendance of a Bookworm)",
+    "url": "https://cdn.myanimelist.net/images/characters/11/611799.jpg"
   },
   {
     "name": "Nami (One Piece)",
@@ -488,12 +616,28 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/3/584634.jpg"
   },
   {
+    "name": "Otabek Altin (Yuri!!! on Ice)",
+    "url": "https://cdn.myanimelist.net/images/characters/12/325879.jpg"
+  },
+  {
+    "name": "Phichit Chulanont (Yuri!!! on Ice)",
+    "url": "https://cdn.myanimelist.net/images/characters/4/311717.jpg"
+  },
+  {
     "name": "Piccolo (Dragon Ball)",
     "url": "https://cdn.myanimelist.net/images/characters/8/45628.jpg"
   },
   {
     "name": "Portgas D. Ace (One Piece)",
     "url": "https://cdn.myanimelist.net/images/characters/2/72220.jpg"
+  },
+  {
+    "name": "Pride Royal Ivy (The Most Heretical Last Boss Queen: From Villainess to Savior)",
+    "url": "https://cdn.myanimelist.net/images/characters/3/516442.jpg"
+  },
+  {
+    "name": "Ranga (That Time I Got Reincarnated as a Slime)",
+    "url": "https://cdn.myanimelist.net/images/characters/10/437475.jpg"
   },
   {
     "name": "Raye Penber (Death Note)",
@@ -552,6 +696,10 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/10/59125.jpg"
   },
   {
+    "name": "Sabine (Saving 80,000 Gold in Another World for My Retirement)",
+    "url": "https://cdn.myanimelist.net/images/characters/12/494735.jpg"
+  },
+  {
     "name": "Sabito (Demon Slayer)",
     "url": "https://cdn.myanimelist.net/images/characters/8/599194.jpg"
   },
@@ -578,6 +726,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Saori Hayami (Voice Actor)",
     "url": "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png"
+  },
+  {
+    "name": "Sarasa Feed (Management of a Novice Alchemist)",
+    "url": "https://cdn.myanimelist.net/images/characters/15/479522.jpg"
   },
   {
     "name": "Sasuke Uchiha (Naruto)",
@@ -616,6 +768,10 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/10/458989.jpg"
   },
   {
+    "name": "Shion (That Time I Got Reincarnated as a Slime)",
+    "url": "https://cdn.myanimelist.net/images/characters/4/624923.jpg"
+  },
+  {
     "name": "Shiraishi (Golden Kamuy)",
     "url": "https://cdn.myanimelist.net/images/characters/12/615053.jpg"
   },
@@ -636,6 +792,10 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/8/302316.jpg"
   },
   {
+    "name": "Shuna (That Time I Got Reincarnated as a Slime)",
+    "url": "https://cdn.myanimelist.net/images/characters/10/269273.jpg"
+  },
+  {
     "name": "Sinbad (Magi: The Labyrinth of Magic)",
     "url": "https://cdn.myanimelist.net/images/characters/4/486947.jpg"
   },
@@ -646,6 +806,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Sora (No Game No Life)",
     "url": "https://cdn.myanimelist.net/images/characters/4/615661.jpg"
+  },
+  {
+    "name": "Souei (That Time I Got Reincarnated as a Slime)",
+    "url": "https://picsum.photos/seed/souei/96"
   },
   {
     "name": "Sougo Okita (Gintama)",
@@ -660,6 +824,10 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png"
   },
   {
+    "name": "Sui (Campfire Cooking in Another World with My Absurd Skill)",
+    "url": "https://cdn.myanimelist.net/images/characters/3/617633.jpg"
+  },
+  {
     "name": "Sukuna (Jujutsu Kaisen)",
     "url": "https://cdn.myanimelist.net/images/characters/14/572709.jpg"
   },
@@ -670,6 +838,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Taiga Aisaka (Toradora!)",
     "url": "https://cdn.myanimelist.net/images/characters/11/514086.jpg"
+  },
+  {
+    "name": "Taikoubou (Soul Hunter / Houshin Engi)",
+    "url": "https://cdn.myanimelist.net/images/characters/10/605835.jpg"
   },
   {
     "name": "Taki Tachibana (Your Name)",
@@ -728,6 +900,14 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png"
   },
   {
+    "name": "Umi Ryuuzaki (Magic Knight Rayearth)",
+    "url": "https://cdn.myanimelist.net/images/characters/3/120485.jpg"
+  },
+  {
+    "name": "Undertaker (Black Butler)",
+    "url": "https://cdn.myanimelist.net/images/characters/5/386237.jpg"
+  },
+  {
     "name": "Uryu Ishida (Bleach)",
     "url": "https://cdn.myanimelist.net/images/characters/16/139189.jpg"
   },
@@ -744,6 +924,14 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/14/86185.jpg"
   },
   {
+    "name": "Veldora Tempest (That Time I Got Reincarnated as a Slime)",
+    "url": "https://cdn.myanimelist.net/images/characters/7/360786.jpg"
+  },
+  {
+    "name": "Victor Nikiforov (Yuri!!! on Ice)",
+    "url": "https://cdn.myanimelist.net/images/characters/13/318419.jpg"
+  },
+  {
     "name": "Violet Evergarden (Violet Evergarden)",
     "url": "https://cdn.myanimelist.net/images/characters/9/345616.jpg"
   },
@@ -754,6 +942,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Xenovia Quarta (High School DxD)",
     "url": "https://cdn.myanimelist.net/images/characters/13/279781.jpg"
+  },
+  {
+    "name": "Yakov Feltsman (Yuri!!! on Ice)",
+    "url": "https://cdn.myanimelist.net/images/characters/6/318076.jpg"
   },
   {
     "name": "Yami Sukehiro (Black Clover)",
@@ -768,12 +960,20 @@ export const ANIME_CHAR_OPTIONS = [
     "url": "https://cdn.myanimelist.net/images/characters/9/603817.jpg"
   },
   {
+    "name": "Yoko Nakajima (The Twelve Kingdoms)",
+    "url": "https://cdn.myanimelist.net/images/characters/16/282020.jpg"
+  },
+  {
     "name": "Yor Forger (Spy x Family)",
     "url": "https://cdn.myanimelist.net/images/characters/11/457934.jpg"
   },
   {
     "name": "Yoshihiro Togashi (Creator - Hunter x Hunter)",
     "url": "https://cdn.myanimelist.net/images/characters/12/584626.jpg"
+  },
+  {
+    "name": "Yui Hongo (Fushigi Yûgi)",
+    "url": "https://cdn.myanimelist.net/images/characters/5/89965.jpg"
   },
   {
     "name": "Yuji Itadori (Jujutsu Kaisen)",
@@ -786,6 +986,10 @@ export const ANIME_CHAR_OPTIONS = [
   {
     "name": "Yuki Sohma (Fruits Basket)",
     "url": "https://cdn.myanimelist.net/images/characters/10/417954.jpg"
+  },
+  {
+    "name": "Yuna (Kuma Kuma Kuma Bear)",
+    "url": "https://cdn.myanimelist.net/images/characters/7/596470.jpg"
   },
   {
     "name": "Yuno Gasai (Future Diary)",
